@@ -34,9 +34,8 @@ class InfoDetail(DetailView,LoginRequiredMixin):
 
 class InfoUpdate(UpdateView,LoginRequiredMixin):
     model = User
-    fields = ('username','first_name','last_name')
+    fields = ('username','first_name','last_name','email','age','gender','color')
     template_name = 'registration/info_form.html'
-    success_url = reverse_lazy("tcapp:detailview", kwargs={'pk':User.pk})
 
 class InfoDelete(DeleteView,LoginRequiredMixin):
     model = User
