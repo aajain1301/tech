@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+
+{% block body_block %}
+  <h1>Click for details of <a href="{% url 'tcapp:detailview' pk=user.pk %}">{{user.username}}</a></h1>
+{% endblock %}

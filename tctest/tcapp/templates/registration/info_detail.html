@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+
+{% block body_block %}
+<div class="jumbotron">
+  <h1>Details:</h1>
+  <p>First Name:{{info_detail.first_name}}</p>
+  <p>Last Name:{{info_detail.last_name}}</p>
+  <p>Username:{{ info_detail.username }}</p>
+  <p>Age:{{info_detail.age}}</p>
+  <p>Gender:{{info_detail.gender}}</p>
+  <p>Color:{{info_detail.color}}</p>
+</div>
+
+<div class="container">
+  <p><a class="btn btn-warning" href="{% url 'tcapp:update' pk=user.pk %}">Update</a> </p>
+  <p><a class="btn btn-danger" href="{% url 'tcapp:delete' pk=user.pk %}">Delete</a> </p>
+</div>
+
+{% endblock %}
